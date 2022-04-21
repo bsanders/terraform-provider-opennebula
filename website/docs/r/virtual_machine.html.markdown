@@ -174,6 +174,8 @@ The following attribute are exported:
 * `nic_id` - nic attachment identifier
 * `network` - network name
 * `computed_ip` - IP of the virtual machine on this network.
+* `computed_ip6_global` - IPv6 of the virtual machine on this network.
+* `computed_ip6_link` - Link Local IPv6 of the virtual machine on this network.
 * `computed_mac` - MAC of the virtual machine on this network.
 * `computed_model` - Nic model driver.
 * `computed_virtio_queues` - Virtio multi-queue size.
@@ -194,6 +196,8 @@ The following attribute are exported:
 * `nic_id` - nic attachment identifier
 * `network` - network name
 * `computed_ip` - IP of the virtual machine on this network.
+* `computed_ip6_global` - IPv6 of the virtual machine on this network.
+* `computed_ip6_link` - Link Local IPv6 of the virtual machine on this network.
 * `computed_mac` - MAC of the virtual machine on this network.
 * `computed_model` - Nic model driver.
 * `computed_virtio_queues` - Virtio multi-queue size.
