@@ -1,0 +1,18 @@
+variables:
+  OPENNEBULA_ENDPOINT: "http://localhost:2633/RPC2"
+  OPENNEBULA_USERNAME: "oneadmin"
+  OPENNEBULA_PASSWORD: "opennebula"
+  OPENNEBULA_FLOW_ENDPOINT: "http://localhost:2474"
+  TF_ACC: 1
+
+stages:
+  - test
+
+test-5_12:
+  stage: test
+  name: "Test OpenNebula 5.12"
+  image: ubuntu:20.04
+  script:
+    - |
+      curl -sSfL https://dl.google.com/go/go${GO_VER}.linux-amd64.tar.gz | sudo tar -C /usr/local -xzf -
+      echo /usr/local/go/bin/go version
