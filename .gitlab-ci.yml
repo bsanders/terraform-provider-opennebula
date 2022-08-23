@@ -21,10 +21,10 @@ test-5_12:
       echo "updating repo and installing ci script dependencies"
       apt update && apt install -y curl sudo gpg tzdata
       echo "setting up opennebula apt repo"
-      curl -sSfL https://downloads.opennebula.io/repo/repo.key | gpg --dearmor | tee /usr/share/keyrings/opennebula-archive-keyring.gpg
+      curl -sSfL https://downloads.opennebula.io/repo/repo.key | gpg --dearmor > /usr/share/keyrings/opennebula-archive-keyring.gpg
       echo "deb [signed-by=/usr/share/keyrings/opennebula-archive-keyring.gpg] https://downloads.opennebula.io/repo/5.12/Ubuntu/20.04 stable opennebula" > /etc/apt/sources.list.d/opennebula.list
       echo "installing opennebula (this takes several minutes)"
-      apt-get -y update && apt-get install -y opennebula opennebula-flow systemd-tmpfiles
+      apt-get -y update && apt-get install -y opennebula opennebula-flow systemd-standalone-tmpfiles
       echo "running oned.sh..."
       source .github/scripts/oned.sh
       ls -lap
