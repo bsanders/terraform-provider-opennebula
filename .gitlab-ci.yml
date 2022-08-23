@@ -21,6 +21,6 @@ test-5_12:
       curl -sSfL https://dl.google.com/go/go${GO_VER}.linux-amd64.tar.gz | tar -C /usr/local -xzf -
       /usr/local/go/bin/go version
       curl -sSfL https://downloads.opennebula.io/repo/repo.key > /usr/share/keyrings/opennebula.key
-      echo "deb https://downloads.opennebula.io/repo/5.12/Ubuntu/20.04 stable opennebula" > /etc/apt/sources.list.d/opennebula.list'
+      echo "deb https://downloads.opennebula.io/repo/5.12/Ubuntu/20.04 stable opennebula" > /etc/apt/sources.list.d/opennebula.list
       apt update && apt install -y opennebula opennebula-flow
       ls -lap
