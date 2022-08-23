@@ -4,6 +4,7 @@ variables:
   OPENNEBULA_PASSWORD: "opennebula"
   OPENNEBULA_FLOW_ENDPOINT: "http://localhost:2474"
   TF_ACC: 1
+  GO_VER: "1.18.2"
 
 stages:
   - test
