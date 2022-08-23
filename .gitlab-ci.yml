@@ -14,5 +14,7 @@ test-5_12:
   image: ubuntu:20.04
   script:
     - |
+      apt update
+      apt install -y curl sudo
       curl -sSfL https://dl.google.com/go/go${GO_VER}.linux-amd64.tar.gz | sudo tar -C /usr/local -xzf -
       echo /usr/local/go/bin/go version
