@@ -11,6 +11,7 @@ stages:
 
 test-5_12:
   stage: test
+  tags: amd64
 #  name: "Test OpenNebula 5.12"
   image: ubuntu:20.04
   script:
