@@ -10,7 +10,7 @@ stages:
 
 test-5_12:
   stage: test
-  name: "Test OpenNebula 5.12"
+#  name: "Test OpenNebula 5.12"
   image: ubuntu:20.04
   script:
     - |
