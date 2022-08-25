@@ -22,7 +22,7 @@ test-5_12:
       sudo apt update && sudo apt install -y curl sudo gpg tzdata
       echo "setting up opennebula apt repo"
       curl -sSfL https://downloads.opennebula.io/repo/repo.key | sudo gpg --dearmor | sudo tee /usr/share/keyrings/opennebula-archive-keyring.gpg
-      sudo -i echo "deb [signed-by=/usr/share/keyrings/opennebula-archive-keyring.gpg] https://downloads.opennebula.io/repo/5.12/Ubuntu/20.04 stable opennebula" > /etc/apt/sources.list.d/opennebula.list
+      sudo bash -c 'echo "deb [signed-by=/usr/share/keyrings/opennebula-archive-keyring.gpg] https://downloads.opennebula.io/repo/5.12/Ubuntu/20.04 stable opennebula" > /etc/apt/sources.list.d/opennebula.list'
       echo "installing opennebula (this takes several minutes)"
       sudo apt-get -y update && sudo apt-get install -y opennebula opennebula-flow systemd
       echo "running oned.sh..."
