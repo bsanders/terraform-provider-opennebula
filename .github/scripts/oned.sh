@@ -35,6 +35,7 @@ sudo systemctl start opennebula
 sudo systemctl status opennebula
 sudo journalctl -xe _SYSTEMD_UNIT=opennebula.service
 sudo systemctl start opennebula-flow
+sleep 600
 
 # check it's up
 timeout 60 sh -c 'until nc -z $0 $1; do sleep 1; done' localhost 2633
