@@ -32,6 +32,8 @@ echo 'DATASTORE_MAD = [ EXECUTABLE = "one_datastore", ARGUMENTS  = "-t 15 -d dum
 
 # start oned
 sudo systemctl start opennebula
+sudo systemctl status opennebula
+sudo journalctl -xe 
 sudo systemctl start opennebula-flow
 
 # check it's up
