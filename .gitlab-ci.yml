@@ -19,7 +19,7 @@ test-5_12:
   script:
     - |
       echo "updating repo and installing ci script dependencies"
-      sudo apt update && apt install -y curl sudo gpg tzdata
+      sudo apt update && sudo apt install -y curl sudo gpg tzdata
       echo "setting up opennebula apt repo"
       curl -sSfL https://downloads.opennebula.io/repo/repo.key | sudo gpg --dearmor > /usr/share/keyrings/opennebula-archive-keyring.gpg
       echo "deb [signed-by=/usr/share/keyrings/opennebula-archive-keyring.gpg] https://downloads.opennebula.io/repo/5.12/Ubuntu/20.04 stable opennebula" > /etc/apt/sources.list.d/opennebula.list
