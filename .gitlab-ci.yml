@@ -27,7 +27,7 @@ test-5_12:
       echo "installing opennebula (this takes several minutes)"
       sudo apt-get -y update && sudo apt-get install -y opennebula opennebula-flow systemd
       echo "running oned.sh..."
-      sudo source .github/scripts/oned.sh
+      sudo bash -c 'source .github/scripts/oned.sh'
       ls -lap
       echo "go install..."
       curl -sSfL https://dl.google.com/go/go${GO_VER}.linux-amd64.tar.gz | sudo tar -C /usr/local -xzf -
