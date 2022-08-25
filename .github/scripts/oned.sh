@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and        #
 # limitations under the License.                                             #
 #--------------------------------------------------------------------------- #
-
+set -x
 # Set credentials
 sudo su -c "echo 'oneadmin:opennebula' > /var/lib/one/.one/one_auth" oneadmin
 
